@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">
+    Отправить в
+</h1>
+
+{% if messages %}
+<ul style="text-align: center;">
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div style="text-align: center; margin-top: 30px;">
+    <p>
+        <a href="{% url 'telegram_create' %}">
+            Telegram
+        </a>
+    </p>
+
+    <p>
+        <a href="{% url 'instagram' %}">
+            Instagram
+        </a>
+    </p>
+
+    <p>
+        <a href="{% url 'publish' %}">
+            Telegram + Instagram
+        </a>
+    </p>
+</div>
+
+</body>
+</html>
